@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-	entry: path.join(__dirname, 'src', 'index.js'),
+	entry: ['@babel/polyfill', './src/index.js'],
 	output: {
 		path: path.join(__dirname, 'build'),
 		filename: 'bundle.js'
@@ -19,7 +19,7 @@ module.exports = {
 			},
 			{
 				test: /.(css|scss)$/,
-				use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ]
+				use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
 			},
 			{
 				test: /.(jpg|jpeg|png|gif|mp3|svg)$/,

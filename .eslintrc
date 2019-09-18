@@ -18,7 +18,9 @@
 		}
 	},
 	"plugins": [
-		"react"
+		"react",
+		"import",
+		"prettier"
 	],
 	"rules": {
 		"one-var": 0,
